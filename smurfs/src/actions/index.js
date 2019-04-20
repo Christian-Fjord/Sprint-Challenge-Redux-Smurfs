@@ -20,13 +20,13 @@ export const fetchSmurfs = () => dispatch => {
 }
 
 export const addNewSmurf = (newSmurf) => dispatch => {
-  dispatch({ type: ADDING_SMURF });
+  dispatch({ type: ADD_SMURF });
   axios 
   .post('http://localhost:3333/smurfs', newSmurf)
   .then( response => {
-    dispatch({ type: SMURF_ADDED, payload: response.data});
+    dispatch({ type: ADDED_SMURF, payload: response.data});
   })
   .catch(error => {
-    dispatch({ type: ADD_SMURF_ERROR, payload: error});
+    dispatch({ type: ADD_ERROR, payload: error});
   });
 }; 

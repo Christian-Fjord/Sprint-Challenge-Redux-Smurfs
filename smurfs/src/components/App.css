@@ -26,3 +26,31 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+input {
+  height: 30px;
+  margin-bottom: 5px;
+  border: 1px solid black;
+}
+
+button {
+  margin-top: 5px;
+  width: 22%;
+  height: 30px;
+  background-color: black;
+  color: green;
+  border: 1px solid black;
+}
+
+button:hover {
+  background-color: green;
+  color: black;
+}
